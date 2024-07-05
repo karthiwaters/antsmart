@@ -19,6 +19,16 @@ jobs:
         with:
           submodules: true
           lfs: false
+      - name: NodeJS
+        id: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install packages
+        run: npm i --force
+        
+      - name: build
+        run: npm run build
+
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
