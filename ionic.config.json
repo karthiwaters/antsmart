@@ -1,0 +1,7 @@
+{
+  "name": "antsmart",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
