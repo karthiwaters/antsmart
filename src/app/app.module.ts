@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
 import { Sim } from '@ionic-native/sim/ngx';
 import { StatusBar } from '@capacitor/status-bar';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +21,7 @@ import { StatusBar } from '@capacitor/status-bar';
     SplashScreen,
     AndroidPermissions,
     Sim,
+    BarcodeScanner,
   { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent],
