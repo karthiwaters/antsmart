@@ -19,15 +19,17 @@ jobs:
         with:
           submodules: true
           lfs: false
+
       - name: NodeJS
         id: actions/setup-node@v3
         with:
           node-version: '18'
+
       - name: Install packages
         run: npm i --force
-        
+
       - name: build
-        run: npm run build
+        run: npm run production
 
       - name: Build And Deploy
         id: builddeploy
