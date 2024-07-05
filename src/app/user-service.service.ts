@@ -31,11 +31,14 @@ export class UserService {
 
       // Fetch email (dummy data, needs actual implementation)
       userInfo.email = 'example@gmail.com';
-    }
-
-    // For iOS, you may prompt the user to enter their email and phone number manually
-    if (this.platform.is('ios')) {
-      // Prompt user for email and phone number
+    } else if (this.platform.is('ios')) {
+      // For iOS, you may prompt the user to enter their email and phone number manually
+      userInfo.email = 'ios@example.com'; // Dummy data for iOS
+      userInfo.phoneNumber = '1234567890'; // Dummy data for iOS
+    } else {
+      // Mock data for browser
+      userInfo.email = 'browser@example.com';
+      userInfo.phoneNumber = '0987654321';
     }
 
     return userInfo;
